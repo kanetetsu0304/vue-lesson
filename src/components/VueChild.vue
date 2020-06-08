@@ -5,7 +5,7 @@
       <input type="text" v-model="newItem" />
       <button @click="addItem()">Add</button>
     </form>
-    <p>{{ `${area}件のタスクがあります` }}</p>
+    <p>{{ `${num}件のタスクがあります` }}</p>
     <ul>
       <li v-for="(todo,index) in todos" :key="todo.id">
         <input type="checkbox" v-model="todo.isDone" />
@@ -46,7 +46,7 @@ export default {
     }
   },
   computed: {
-    area: function() {
+    num: function() {
       return this.todos.length;
     }
   },
