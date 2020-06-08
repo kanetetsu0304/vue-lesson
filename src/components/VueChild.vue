@@ -54,7 +54,7 @@ export default {
     todos: {
       handler: function() {
         if (this.todos.length === 0) {
-          alert("タスクを全て消化しました！！！");
+          alert(`${this.title}のタスクを全て消化しました！！！`);
         }
       },
       deep: true
